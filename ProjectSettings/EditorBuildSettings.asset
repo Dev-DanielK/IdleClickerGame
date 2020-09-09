@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fishing Scene.unity
     guid: e778495e23958054a89530929d853d61
+  - enabled: 1
+    path: Assets/Scenes/Battle Scene.unity
+    guid: ec6d12faac95b8b42b900dfabbab639f
   m_configObjects: {}

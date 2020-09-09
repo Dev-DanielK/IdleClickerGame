@@ -21,6 +21,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] int fish = 1;
     [SerializeField] TextMeshProUGUI fishText;
 
+    //healthbar
+    [SerializeField] int maxHealth = 100;
+    [SerializeField] int currentHealth;
+
+    public HealthBar healthBar;
+
     private void Awake()
     {
         //gameStatusCount will storage how many GameStatus Objects there are
@@ -41,6 +47,7 @@ public class GameManager : MonoBehaviour
         logsText.text = currentLogs.ToString();
         oresText.text = currentOres.ToString();
         fishText.text = currentFish.ToString();
+
     }
     // Update is called once per frame
     void Update()
@@ -67,4 +74,11 @@ public class GameManager : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public void TakeDamage(int damage){
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
+
 }
